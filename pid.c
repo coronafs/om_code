@@ -2,7 +2,7 @@
 #include <stdint.h>
 
 
-float pid(float current, float desired)
+float pid(float current, float target)
 {
 	float p = 100;
 	float i = 0;
@@ -15,7 +15,7 @@ float pid(float current, float desired)
 	float diff;
 
 
-	prop = desired - current;
+	prop = target - current;
 	integ += prop;
 	diff = prop - previous;
 
