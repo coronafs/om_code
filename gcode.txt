@@ -1,0 +1,31 @@
+
+// simulator:
+// https://nraynaud.github.io/webgcode/ 
+
+
+
+// pomiki v mm, absolutno podajanje koord
+G21 G90
+
+// zagon orodja   
+M3 S1000
+
+
+
+// neinterpolirani pomik - max hitrost
+G00 X0 Y0 Z10
+
+// interpolirani premik + podajna hitrost mm/min
+G01 Z-0.1 F100
+
+// krozni lok v sourni (negativni) smeri
+G02 X0 Y10 I-10 J0
+
+// krozni lok v protiurni (pozitivni) smeri
+G03 X0 Y10 I-10 J0
+
+
+
+// zaustavitev programa 
+M30
+ 
